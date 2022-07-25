@@ -1,0 +1,17 @@
+function largestPalindrome(){
+
+    for(var i =999; i>100; i--){
+        for(var j = 999; j>100; j--){
+            var mul = j*i;
+            if(isPalin(mul)){
+                return i * j;
+            }
+        }
+    }
+}
+
+function isPalin(i){
+    return i.toString() == i.toString().split("").reverse().join("");
+}
+
+console.log(largestPalindrome());
